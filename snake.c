@@ -38,6 +38,7 @@ int main() {
   noecho();
   keypad(stdscr, TRUE);
   nodelay(stdscr, TRUE);
+  curs_set(0);
 
   init();
   while(run) {
@@ -69,8 +70,8 @@ void moveSnake() {
 
 void moveApple() {
   do {
-    apple.x = rand() % width;
-    apple.y = rand() % height;
+    apple.x = rand() % (width - 2) + 1;
+    apple.y = rand() % (height - 2) + 1;
   } while (touchingSnake(apple.x, apple.y) || apple.x < 0 || apple.x >= width || apple.y < 0 || apple.y >= height);
 }
 
