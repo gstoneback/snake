@@ -1,4 +1,4 @@
 # snake
-snake game in c and curses
+Snake game in C and Curses
 
-compile with `gcc -lcurses snake.c`
+Compile with `gcc -lcurses snake.c`
