@@ -138,6 +138,7 @@ void draw() {
   for(int i = 0; i < length; i++) {
     mvaddch(snake[i].y+1, snake[i].x+1, '$');
   }
+  mvprintw(1, 1, "%d", length);
 }
 
 int touchingSnake(int x, int y) {
